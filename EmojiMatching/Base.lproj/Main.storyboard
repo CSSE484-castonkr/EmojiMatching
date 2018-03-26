@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KG1-r2-FrZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem id="Rmd-xv-P7M">
                                         <barButtonItem key="leftBarButtonItem" id="8RT-4V-JPn">
@@ -44,17 +44,287 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="672"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNM-qq-vDS" userLabel="Board">
-                                        <rect key="frame" x="20" y="102.33333333333334" width="374" height="467.33333333333326"/>
+                                        <rect key="frame" x="20" y="102" width="374" height="468"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="GYD-sQ-DPl">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="468"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sRd-Cr-Y7m">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="93.666666666666671"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbt-hm-TJS">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="93.666666666666671"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nZ-VR-C0R">
+                                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="93.666666666666671"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9b-no-nqn">
+                                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="93.666666666666671"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBC-rd-gWl">
+                                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="93.666666666666671"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="64v-Mg-qNY">
+                                                        <rect key="frame" x="0.0" y="93.666666666666657" width="374" height="93.666666666666657"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBe-Vs-pJz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="93.666666666666671"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osQ-KB-IBE">
+                                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="93.666666666666671"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="el9-A0-I8s">
+                                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="93.666666666666671"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQK-DJ-gq6">
+                                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="93.666666666666671"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="N7H-0P-buM">
+                                                        <rect key="frame" x="0.0" y="187.33333333333331" width="374" height="93.333333333333314"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Q0-gx-DLh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="93.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjf-5h-z0l">
+                                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="93.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGe-yC-AJ2">
+                                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="93.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4a-BN-dqx">
+                                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="93.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9dm-By-o5N">
+                                                        <rect key="frame" x="0.0" y="280.66666666666669" width="374" height="93.666666666666686"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qD1-WO-BVX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="93.666666666666671"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKq-5g-xhG">
+                                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="93.666666666666671"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8h6-dy-Zwn">
+                                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="93.666666666666671"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcN-5O-Sn2">
+                                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="93.666666666666671"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6Fk-5I-4xP">
+                                                        <rect key="frame" x="0.0" y="374.33333333333331" width="374" height="93.666666666666686"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ush-0A-LKn">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="93.666666666666671"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtO-aQ-nhj">
+                                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="93.666666666666671"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5W-Bf-jPC">
+                                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="93.666666666666671"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyx-gm-jRC">
+                                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="93.666666666666671"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                <state key="normal" title="🎇"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                                </variation>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                                </variation>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.40580785419999998" green="0.91212607010000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="GYD-sQ-DPl" firstAttribute="leading" secondItem="CNM-qq-vDS" secondAttribute="leading" id="IPl-Ex-feK"/>
                                             <constraint firstAttribute="width" constant="560" id="PBj-u9-2Bx"/>
+                                            <constraint firstItem="GYD-sQ-DPl" firstAttribute="centerY" secondItem="CNM-qq-vDS" secondAttribute="centerY" id="eXd-nR-jax"/>
+                                            <constraint firstItem="GYD-sQ-DPl" firstAttribute="top" secondItem="CNM-qq-vDS" secondAttribute="top" id="i1d-Oz-Gsg"/>
+                                            <constraint firstItem="GYD-sQ-DPl" firstAttribute="centerX" secondItem="CNM-qq-vDS" secondAttribute="centerX" id="pt7-rg-jSA"/>
                                             <constraint firstAttribute="height" constant="700" id="sv6-n8-3Ad"/>
+                                            <constraint firstAttribute="bottom" secondItem="GYD-sQ-DPl" secondAttribute="bottom" id="v0N-u1-gn8"/>
                                             <constraint firstAttribute="width" secondItem="CNM-qq-vDS" secondAttribute="height" multiplier="4:5" id="xgn-Cp-laj"/>
+                                            <constraint firstAttribute="trailing" secondItem="GYD-sQ-DPl" secondAttribute="trailing" id="zIm-VM-Gw0"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="PBj-u9-2Bx"/>
                                                 <exclude reference="sv6-n8-3Ad"/>
+                                                <exclude reference="IPl-Ex-feK"/>
+                                                <exclude reference="i1d-Oz-Gsg"/>
+                                                <exclude reference="v0N-u1-gn8"/>
+                                                <exclude reference="zIm-VM-Gw0"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="IPl-Ex-feK"/>
+                                                <include reference="i1d-Oz-Gsg"/>
+                                                <include reference="v0N-u1-gn8"/>
+                                                <include reference="zIm-VM-Gw0"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
