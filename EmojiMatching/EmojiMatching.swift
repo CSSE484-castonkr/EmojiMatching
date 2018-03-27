@@ -41,7 +41,6 @@ class MatchingGame: CustomStringConvertible {
     enum GameState {
         case noSelection
         case oneSelection(Int)
-        case turnComplete(Int, Int)
         
         func simpleDescription() -> String {
             switch self{
@@ -49,8 +48,6 @@ class MatchingGame: CustomStringConvertible {
                 return "Waiting for first selection"
             case .oneSelection(let firstClick):
                 return "Waiting for second selection: first click=\(firstClick)"
-            case .turnComplete(let firstClick, let secondClick):
-                return "Turn complete: first click=\(firstClick) second click=\(secondClick)"
             }
         }
     }
@@ -87,36 +84,34 @@ class MatchingGame: CustomStringConvertible {
         
     }
     
-    func pressedCard(atIndex: Int){
+    func pressedCard(atIndex: Int) -> Bool{
         switch self.gameState {
         case .noSelection:
             self.gameState = GameState.oneSelection(atIndex)
-        case .oneSelection(let firstClick):
-            self.gameState = GameState.turnComplete(firstClick, atIndex)
-        case .turnComplete(_, _):
-            break
-        }
-        
-        if (self.cardStates[atIndex] == .hidden){
             self.cardStates[atIndex] = .shown
+            return false
+        case .oneSelection(let firstClick):
+            self.cardStates[atIndex] = .shown
+            self.startNewTurn(firstClick, atIndex)
+            return true
+
         }
     }
     
-    func startNewTurn() {
-        switch self.gameState {
-        case .noSelection:
-            break
-        case .oneSelection(_):
-            break
-        case .turnComplete(let firstClick, let secondClick):
-            if (self.cards[firstClick] == self.cards[secondClick]) {
-                self.cardStates[firstClick] = .removed
-                self.cardStates[secondClick] = .removed
-            } else{
-                self.cardStates[firstClick] = .hidden
-                self.cardStates[secondClick] = .hidden
-            }
+    func startNewTurn(_ firstIndex: Int, _ secondIndex: Int) {
+        delay(1.2) {
             self.gameState = .noSelection
+            self.checkMatch(firstIndex, secondIndex)
+        }
+    }
+
+    func checkMatch(_ firstIndex: Int, _ secondIndex: Int) {
+        if (self.cards[firstIndex] == self.cards[secondIndex]) {
+            self.cardStates[firstIndex] = .removed
+            self.cardStates[secondIndex] = .removed
+        } else{
+            self.cardStates[firstIndex] = .hidden
+            self.cardStates[secondIndex] = .hidden
         }
     }
     
@@ -131,7 +126,7 @@ class MatchingGame: CustomStringConvertible {
             gameString.append(self.cards[i])
             rowCount += 1
         }
-        return gameString
+        return gameString + "\n"
         
     }
     
