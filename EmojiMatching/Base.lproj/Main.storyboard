@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,11 +16,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EmojiMatching" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KG1-r2-FrZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                                 <items>
                                     <navigationItem id="Rmd-xv-P7M">
                                         <barButtonItem key="leftBarButtonItem" id="8RT-4V-JPn">
@@ -28,6 +28,9 @@
                                                 <rect key="frame" x="20" y="7" width="170" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="New Game"/>
+                                                <connections>
+                                                    <action selector="pressedNewGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="msP-ES-EJr"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
@@ -37,23 +40,27 @@
                                 <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Ad3-bs-VlF"/>
-                                    <barButtonItem title="New Game" id="HDS-uX-syA"/>
+                                    <barButtonItem title="New Game" id="HDS-uX-syA">
+                                        <connections>
+                                            <action selector="pressedNewGame:" destination="BYZ-38-t0r" id="Y2d-TB-H7t"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZK-Za-EP7" userLabel="UsableArea">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="44" width="768" height="980"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNM-qq-vDS" userLabel="Board">
-                                        <rect key="frame" x="20" y="102" width="374" height="468"/>
+                                        <rect key="frame" x="104" y="140" width="560" height="700"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="GYD-sQ-DPl">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="468"/>
+                                                <rect key="frame" x="64" y="20" width="432" height="660"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sRd-Cr-Y7m">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="93.666666666666671"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="432" height="132"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbt-hm-TJS">
-                                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="93.666666666666671"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -62,9 +69,12 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rlC-s6-4iP"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nZ-VR-C0R">
-                                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="93.666666666666671"/>
+                                                                <rect key="frame" x="108" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -73,9 +83,12 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NLH-ac-WH2"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9b-no-nqn">
-                                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="93.666666666666671"/>
+                                                                <rect key="frame" x="216" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -84,9 +97,12 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LTw-1f-9eq"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBC-rd-gWl">
-                                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="93.666666666666671"/>
+                                                                <rect key="frame" x="324" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -95,14 +111,17 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mSW-Z2-LkN"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="64v-Mg-qNY">
-                                                        <rect key="frame" x="0.0" y="93.666666666666657" width="374" height="93.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="132" width="432" height="132"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBe-Vs-pJz">
-                                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="93.666666666666671"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -111,9 +130,12 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fmA-27-xbs"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osQ-KB-IBE">
-                                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="93.666666666666671"/>
+                                                                <rect key="frame" x="108" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -122,9 +144,12 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J2C-U2-QPm"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="el9-A0-I8s">
-                                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="93.666666666666671"/>
+                                                                <rect key="frame" x="216" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -133,9 +158,12 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uP0-nr-CBA"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQK-DJ-gq6">
-                                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="93.666666666666671"/>
+                                                                <rect key="frame" x="324" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -144,14 +172,17 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQy-bV-iwB"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="N7H-0P-buM">
-                                                        <rect key="frame" x="0.0" y="187.33333333333331" width="374" height="93.333333333333314"/>
+                                                        <rect key="frame" x="0.0" y="264" width="432" height="132"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Q0-gx-DLh">
-                                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="93.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -160,9 +191,12 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OA5-nr-Dx5"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjf-5h-z0l">
-                                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="93.333333333333329"/>
+                                                                <rect key="frame" x="108" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -171,9 +205,12 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="taW-eN-zGb"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGe-yC-AJ2">
-                                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="93.333333333333329"/>
+                                                                <rect key="frame" x="216" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -182,9 +219,12 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HIr-kl-0mR"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4a-BN-dqx">
-                                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="93.333333333333329"/>
+                                                                <rect key="frame" x="324" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -193,14 +233,17 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6XS-jj-3O5"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9dm-By-o5N">
-                                                        <rect key="frame" x="0.0" y="280.66666666666669" width="374" height="93.666666666666686"/>
+                                                        <rect key="frame" x="0.0" y="396" width="432" height="132"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qD1-WO-BVX">
-                                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="93.666666666666671"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -209,9 +252,12 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DoS-2j-pov"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKq-5g-xhG">
-                                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="93.666666666666671"/>
+                                                                <rect key="frame" x="108" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -220,9 +266,12 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wy6-NC-pLD"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8h6-dy-Zwn">
-                                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="93.666666666666671"/>
+                                                                <rect key="frame" x="216" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -231,9 +280,12 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Egl-Sd-xwO"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcN-5O-Sn2">
-                                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="93.666666666666671"/>
+                                                                <rect key="frame" x="324" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -242,14 +294,17 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AD2-JZ-g0u"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6Fk-5I-4xP">
-                                                        <rect key="frame" x="0.0" y="374.33333333333331" width="374" height="93.666666666666686"/>
+                                                        <rect key="frame" x="0.0" y="528" width="432" height="132"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ush-0A-LKn">
-                                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="93.666666666666671"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -258,9 +313,12 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S8L-yf-7lh"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtO-aQ-nhj">
-                                                                <rect key="frame" x="93.666666666666686" y="0.0" width="93.333333333333314" height="93.666666666666671"/>
+                                                                <rect key="frame" x="108" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -269,9 +327,12 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o2K-6k-ZBR"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5W-Bf-jPC">
-                                                                <rect key="frame" x="187" y="0.0" width="93.666666666666686" height="93.666666666666671"/>
+                                                                <rect key="frame" x="216" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -280,9 +341,12 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="apg-gl-JIB"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyx-gm-jRC">
-                                                                <rect key="frame" x="280.66666666666669" y="0.0" width="93.333333333333314" height="93.666666666666671"/>
+                                                                <rect key="frame" x="324" y="0.0" width="108" height="132"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                                                 <state key="normal" title="🎇"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -291,6 +355,9 @@
                                                                 <variation key="heightClass=regular-widthClass=regular">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                                 </variation>
+                                                                <connections>
+                                                                    <action selector="pressedCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vlu-re-HC4"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -393,10 +460,6 @@
                                 <exclude reference="Q7L-ec-Qea"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="OBL-Qu-ZfM"/>
-                                <exclude reference="Tbo-R5-S3r"/>
-                                <exclude reference="V7n-Uc-ZjH"/>
-                                <exclude reference="mN6-GV-a5q"/>
                                 <exclude reference="QSb-ZA-n51"/>
                                 <exclude reference="ZPc-nC-TVe"/>
                                 <exclude reference="twt-O1-A3j"/>
@@ -407,6 +470,10 @@
                                 <exclude reference="XWb-kV-hcZ"/>
                                 <exclude reference="dRe-yQ-ECb"/>
                                 <exclude reference="vdm-bH-LRe"/>
+                                <exclude reference="OBL-Qu-ZfM"/>
+                                <exclude reference="Tbo-R5-S3r"/>
+                                <exclude reference="V7n-Uc-ZjH"/>
+                                <exclude reference="mN6-GV-a5q"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -414,13 +481,13 @@
                                 <include reference="Q7L-ec-Qea"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="IXG-et-oO9"/>
+                                <include reference="XWb-kV-hcZ"/>
+                                <include reference="vdm-bH-LRe"/>
                                 <include reference="OBL-Qu-ZfM"/>
                                 <include reference="Tbo-R5-S3r"/>
                                 <include reference="V7n-Uc-ZjH"/>
                                 <include reference="mN6-GV-a5q"/>
-                                <include reference="IXG-et-oO9"/>
-                                <include reference="XWb-kV-hcZ"/>
-                                <include reference="vdm-bH-LRe"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -438,6 +505,28 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outletCollection property="cards" destination="Wbt-hm-TJS" collectionClass="NSMutableArray" id="Bic-l6-skS"/>
+                        <outletCollection property="cards" destination="6nZ-VR-C0R" collectionClass="NSMutableArray" id="UEd-V8-SXe"/>
+                        <outletCollection property="cards" destination="N9b-no-nqn" collectionClass="NSMutableArray" id="Yqi-mh-gDe"/>
+                        <outletCollection property="cards" destination="YBC-rd-gWl" collectionClass="NSMutableArray" id="GmM-IN-YW4"/>
+                        <outletCollection property="cards" destination="wBe-Vs-pJz" collectionClass="NSMutableArray" id="Ow8-Hg-z9c"/>
+                        <outletCollection property="cards" destination="osQ-KB-IBE" collectionClass="NSMutableArray" id="3Xb-Fh-d9g"/>
+                        <outletCollection property="cards" destination="el9-A0-I8s" collectionClass="NSMutableArray" id="RKs-id-yAM"/>
+                        <outletCollection property="cards" destination="RQK-DJ-gq6" collectionClass="NSMutableArray" id="Gu3-J4-Kq5"/>
+                        <outletCollection property="cards" destination="3Q0-gx-DLh" collectionClass="NSMutableArray" id="Qum-0V-otc"/>
+                        <outletCollection property="cards" destination="mjf-5h-z0l" collectionClass="NSMutableArray" id="5Y4-8q-K9Z"/>
+                        <outletCollection property="cards" destination="bGe-yC-AJ2" collectionClass="NSMutableArray" id="C78-UH-of6"/>
+                        <outletCollection property="cards" destination="l4a-BN-dqx" collectionClass="NSMutableArray" id="hzw-Hc-xy2"/>
+                        <outletCollection property="cards" destination="qD1-WO-BVX" collectionClass="NSMutableArray" id="unN-Pw-F6W"/>
+                        <outletCollection property="cards" destination="yKq-5g-xhG" collectionClass="NSMutableArray" id="i3u-DD-2sZ"/>
+                        <outletCollection property="cards" destination="8h6-dy-Zwn" collectionClass="NSMutableArray" id="jwU-bH-saz"/>
+                        <outletCollection property="cards" destination="YcN-5O-Sn2" collectionClass="NSMutableArray" id="CC3-Mh-1kP"/>
+                        <outletCollection property="cards" destination="ush-0A-LKn" collectionClass="NSMutableArray" id="QVO-ge-nK8"/>
+                        <outletCollection property="cards" destination="JtO-aQ-nhj" collectionClass="NSMutableArray" id="XN0-Ay-gV7"/>
+                        <outletCollection property="cards" destination="l5W-Bf-jPC" collectionClass="NSMutableArray" id="LNd-vh-JDS"/>
+                        <outletCollection property="cards" destination="pyx-gm-jRC" collectionClass="NSMutableArray" id="4jN-RP-I6q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
