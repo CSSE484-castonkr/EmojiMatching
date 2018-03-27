@@ -91,9 +91,12 @@ class MatchingGame: CustomStringConvertible {
             self.cardStates[atIndex] = .shown
             return false
         case .oneSelection(let firstClick):
-            self.cardStates[atIndex] = .shown
-            self.startNewTurn(firstClick, atIndex)
-            return true
+            if (atIndex != firstClick){
+                self.cardStates[atIndex] = .shown
+                self.startNewTurn(firstClick, atIndex)
+                return true
+            }
+            return false
 
         }
     }
