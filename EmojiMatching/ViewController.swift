@@ -12,19 +12,24 @@ class ViewController: UIViewController {
     
     @IBOutlet var cards: [UIButton]!
     
-    var game = MatchingGame(numPairs: 10)
+    var game: MatchingGame! = MatchingGame(numPairs: 10)
     var blockingUiIntentionally = false
+    
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(game)
+        print(game.getBoardString())
         updateView()
     }
     
     @IBAction func pressedNewGame(_ sender: Any) {
         game = MatchingGame(numPairs: 10)
         blockingUiIntentionally = false
-        print(game)
+        print(game.getBoardString())
         updateView()
     }
     
@@ -33,13 +38,13 @@ class ViewController: UIViewController {
             return
         }
         
-        
         let card = sender as! UIButton
-        let pair = game.pressedCard(atIndex: card.tag)
+        let pair = game.pressedCard(card.tag)
         updateView()
         if (pair) {
             blockingUiIntentionally = true
             delay(1.2) {
+                self.game.checkMatch(self.game.firstClick, secondIndex: card.tag)
                 self.updateView()
                 self.blockingUiIntentionally = false
             }
@@ -48,27 +53,18 @@ class ViewController: UIViewController {
     
     func updateView() {
         for i in 0..<cards.count {
-            switch game.cardStates[i] {
+            switch game.getCardState(i) {
             case .hidden:
-                cards[i].setTitle(String(game.cardBack), for: .normal)
+                cards[i].setTitle(game.cardBack, for: .normal)
                 cards[i].isEnabled = true
             case .shown:
-                cards[i].setTitle(String(game.cards[i]), for: .normal)
+                cards[i].setTitle(game.getCardAt(i), for: .normal)
             case .removed:
                 cards[i].setTitle("", for: .normal)
                 cards[i].isEnabled = false
             }
-        }
     }
-    
-    
-    
-    
-    
-   
-
-    
-    
+}
 
 }
 
